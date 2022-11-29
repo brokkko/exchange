@@ -1,0 +1,93 @@
+.wrapper{
+    display: flex;
+    width: 96vw;
+}
+
+.stocks-list{
+    width: 30vw;
+    height: 100vh;
+    color: #E2E2E3;
+    background: #292933;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stocks-details{
+    width: 40vw;
+    height: 100vh;
+    color: #E2E2E3;
+    background: #292933;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.title{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+
+    margin-left: 40px;
+    color: #E2E2E3;
+}
+
+.text{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /* identical to box height */
+
+    color: #6D6D74;
+}
+
+.description{
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 5vw 7vw 6vw 5vw 5vw;
+    margin-left: 20px;
+}
+
+.description-border{
+    border-top: 2px solid #35353F;
+}
+
+.symbol {
+    width: 55px;
+    /* height: 21px; */
+    background: #43434C;
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /* identical to box height */
+    color: #D2D2D4;
+}
+
+.fullName{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    /* identical to box height */
+    color: #D2D2D4;
+}
+
+.green-color{
+    color: #21C78F;
+}
+.red-color{
+    color: #F9607B;
+}
+.none-color{
+    color: #D0D0D3;
+}
+
+
