@@ -1,0 +1,5 @@
+{
+  "uriPathBrokersList": "/brokers",
+  "uriPathWatchList": "/",
+  "uriPathExchange": "/exchange"
+}
