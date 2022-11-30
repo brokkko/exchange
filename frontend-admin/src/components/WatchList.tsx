@@ -63,7 +63,7 @@ export default class WatchList extends Component{
                     ))}
                 </div>
                 <div className="stocks-details">
-                    <StockDetails symbol={this.state.currentStock}></StockDetails>
+                    <StockDetails symbol={this.state.currentStock} key={this.state.currentStock}></StockDetails>
                 </div>
             </div>
 
