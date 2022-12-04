@@ -1,0 +1,5 @@
+.brokers-form-wrapper{
+    background: var(--sections-color);
+    border-radius: 5px;
+    height: 50%;
+}

@@ -1,5 +1,5 @@
 .sidebar{
-    background: #151519;
+    background: var(--sidebar-background-color);
     height: 100vh;
     width: 4vw;
     display: flex;
@@ -19,6 +19,4 @@
     margin-top: 50px;
 }
 
-.selected{
-    background: #24A7F8;
-}
+

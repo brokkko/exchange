@@ -1,0 +1,60 @@
+.wrapper{
+    display: flex;
+    height: 100vh;
+    width: 93vw;
+}
+
+.available-brokers-list{
+    width: 30vw;
+    height: 97%;
+    color: var(--title-color);
+    background: var(--sections-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brokers-description{
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 6vw 9vw 6vw 5vw;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 25px;
+    background: var(--selector-background-color);
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /* identical to box height */
+    color: var(--text-color);
+}
+.remove-button:hover{
+    background: var(--red-color);
+    color: var(--sidebar-background-color);
+    cursor: pointer;
+}
+
+.right-forms{
+    height: 97%;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 5px;
+}

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import '../style/colors.css';
 import "../style/watchlist-style.css";
 import StockDetails from "./StockDetails";
 
@@ -37,7 +38,6 @@ export default class WatchList extends Component{
        this.setState({
            currentStock: symbol
        });
-       console.log(this.state.currentStock)
    }
 
     render() {

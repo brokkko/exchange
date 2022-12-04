@@ -1,0 +1,8 @@
+.removed-brokers-list{
+    background: var(--sections-color);
+    border-radius: 5px;
+    height: calc(50% - 12px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

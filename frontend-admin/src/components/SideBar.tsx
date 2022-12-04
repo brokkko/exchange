@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import '../style/colors.css';
 import "../style/sidebar-style.css";
 import brokersListLogo from"../assets/sidebar/users-icon.svg";
 import exchangeLogo from"../assets/sidebar/auction-icon.svg";
@@ -45,18 +46,18 @@ export default class SideBar extends Component {
             <>
                 <div className="sidebar">
                     <Link to={this.config.uriPathWatchList}
-                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathWatchList ? "selected" : "")}
+                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathWatchList ? "blue-selected-color" : "")}
                           onClick={this.listLinkOnClick}>
                         <img src={listLogo} alt=""/>
                     </Link>
 
                     <Link to={this.config.uriPathBrokersList}
-                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathBrokersList ? "selected" : "")}
+                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathBrokersList ? "blue-selected-color" : "")}
                           onClick={this.brokersLinkOnClick}>
                         <img src={brokersListLogo} alt=""/>
                     </Link>
                     <Link to={this.config.uriPathExchange}
-                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathExchange ? "selected" : "")}
+                          className={"sidebar-icon " + (this.state.currentUri === this.config.uriPathExchange ? "blue-selected-color" : "")}
                           onClick={this.exchangeLinkOnClick}>
                         <img src={exchangeLogo} alt=""/>
                     </Link>
