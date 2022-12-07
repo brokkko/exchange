@@ -2,41 +2,53 @@ import React, {Component} from "react";
 import '../style/colors.css';
 import "../style/watchlist-style.css";
 import StockDetails from "./StockDetails";
+import {brokerAPIRoutes, serverURI, stocksAPIRoutes} from "../core/config/api/api.config";
+import {Stock} from "../core/models/Stock";
 
-type Stocks = {
-    symbol: string,
-    fullName: string
-    last: number,
-    change: number,
-    change_percent: number
-}
 type WatchListState = {
-    currentStock: string
+    currentStock: Stock,
+    stocksList: Stock[]
 }
 
 export default class WatchList extends Component{
 
-    stocksList: Stocks[];
     state: WatchListState;
+
+    round = (value: number): number => {
+        return Math.round(100 * value) / 100;
+    };
 
     constructor(props: []) {
         super(props);
-        this.stocksList = [
-            {symbol: "MSFT", fullName: "Microsoft", last: 245.38, change: -6.86, change_percent: 8.5},
-            {symbol: "APLE", fullName: "Apple", last: 245.38, change: 6.86, change_percent: 8.5},
-            {symbol: "NFLX", fullName: "Netflix", last: 245.38, change: 6.86, change_percent: -8.5},
-            {symbol: "TSLA", fullName: "Tesla", last: 245.38, change: 6.86, change_percent: 8.5},
-        ]
         this.state = {
-            currentStock: this.stocksList[0].symbol
+            currentStock: new Stock(),
+            stocksList: []
         }
+        this.#getAllStocks();
+    }
+
+    #getAllStocks = ()  => {
+        fetch(serverURI + stocksAPIRoutes.prefix, {
+            method: 'GET',
+            headers:  {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(response => {
+            if(response.ok) return response.json();
+        }).then(json => {
+            this.setState({
+                currentStock: json[0],
+                stocksList: json
+            });
+        });
     }
 
    handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
        event.preventDefault();
        const symbol: string = event.currentTarget.id;
        this.setState({
-           currentStock: symbol
+           currentStock: this.state.stocksList.find((elem) => elem.ticker === symbol)
        });
    }
 
@@ -50,20 +62,20 @@ export default class WatchList extends Component{
                         <p></p>
                         <p className="text">Last</p>
                         <p className="text">Change</p>
-                        <p className="text">Change%</p>
                     </div>
-                    {this.stocksList.map((value, index) => (
-                        <div className="description description-border" id={value.symbol} onClick={this.handleClick}>
-                            <p className="text symbol">{value.symbol}</p>
-                            <p className="text fullName">{value.fullName}</p>
+                    {this.state.stocksList.map((value, index) => (
+                        <div className="description description-border" id={value.ticker} onClick={this.handleClick}>
+                            <p className="text symbol">{value.ticker}</p>
+                            <p className="text fullName">{value.name}</p>
                             <p className="text fullName">{value.last}</p>
-                            <p className={"text " + (Number(value.change) > 0 ? "green-color" : "red-color")}>{value.change}</p>
-                            <p className={"text " + (Number(value.change_percent) > 0 ? "green-color" : "red-color")}>{value.change_percent}</p>
+                            <p className={"text " + (this.round(value.open - value.last) > 0 ? "green-color" : "red-color")}>
+                                {this.round(value.open - value.last) > 0 ?
+                                    ("+ " + this.round(value.open - value.last)) : "- " + Math.abs(this.round(value.open - value.last))}</p>
                         </div>
                     ))}
                 </div>
                 <div className="stocks-details">
-                    <StockDetails symbol={this.state.currentStock} key={this.state.currentStock}></StockDetails>
+                    <StockDetails stock={this.state.currentStock} key={this.state.currentStock.ticker}></StockDetails>
                 </div>
             </div>
 

@@ -52,8 +52,14 @@
 .description{
     display: grid;
     justify-items: start;
-    grid-template-columns: 5vw 7vw 6vw 5vw 5vw;
+    grid-template-columns: 4vw 15vw 4vw 4vw ;
     margin-left: 20px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .description-border{

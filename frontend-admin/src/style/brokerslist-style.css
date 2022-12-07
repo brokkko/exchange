@@ -30,14 +30,14 @@
     scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
 }
 
-.removed-brokers-list::-webkit-scrollbar {
+.available-brokers-list::-webkit-scrollbar {
     width: var(--scrollbarWidth);
 }
-.removed-brokers-list::-webkit-scrollbar-track {
+.available-brokers-list::-webkit-scrollbar-track {
     background: var(--scrollbarBg);
     border-radius: var(--scrollbarBorderRadius);
 }
-.removed-brokers-list::-webkit-scrollbar-thumb {
+.available-brokers-list::-webkit-scrollbar-thumb {
     background-color: var(--scrollbarThumb);
     border-radius: var(--scrollbarBorderRadius);
     border: var(--scrollbarBorder);
