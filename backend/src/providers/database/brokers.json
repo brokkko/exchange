@@ -13,7 +13,7 @@
   "lastname": "test",
   "password": "password",
   "founds": 900.08,
-  "status": 0
+  "status": 1
  },
  {
   "id": "ffaadb89-0fe3-4192-8a9c-58b715b6c426",
@@ -21,7 +21,7 @@
   "lastname": "Strannikova",
   "founds": 0,
   "password": "111",
-  "status": 0,
+  "status": 1,
   "stokes": []
  },
  {
@@ -30,16 +30,79 @@
   "lastname": "Surname",
   "founds": 0,
   "password": "111",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "d005a8b0-b1a0-4a36-b155-1cf0049750d4",
+  "firstname": "11",
+  "lastname": "11",
+  "founds": 0,
+  "password": "11",
   "status": 0,
   "stokes": []
  },
  {
-  "id": "c9fcc9fd-2819-40bf-a601-a128681f34b2",
-  "firstname": "Natalia",
-  "lastname": "Strannikova",
+  "id": "1eceb210-7ac4-40ed-a9c6-964e5e5a7a5c",
+  "firstname": "22",
+  "lastname": "22",
   "founds": 0,
-  "password": "111",
+  "password": "22",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "08416663-9525-400c-930a-e7d5104a40b8",
+  "firstname": "33",
+  "lastname": "33",
+  "founds": 0,
+  "password": "33",
   "status": 0,
+  "stokes": []
+ },
+ {
+  "id": "6829f7bc-27ff-4ee1-bcbf-27a6746989b6",
+  "firstname": "11",
+  "lastname": "11",
+  "founds": 0,
+  "password": "1",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "442bf182-bfcd-4056-a1d7-5b26bc7bff72",
+  "firstname": "33",
+  "lastname": "33",
+  "founds": 0,
+  "password": "33",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "cd90c3d1-84fd-4b19-a731-cc847197f03d",
+  "firstname": "44",
+  "lastname": "44",
+  "founds": 0,
+  "password": "44",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "da45a3fa-774b-4aaa-b4a2-d21568f47e20",
+  "firstname": "55",
+  "lastname": "55",
+  "founds": 0,
+  "password": "55",
+  "status": 1,
+  "stokes": []
+ },
+ {
+  "id": "cd0e42c7-068c-44ad-ba58-ca250c275322",
+  "firstname": "66",
+  "lastname": "66",
+  "founds": 0,
+  "password": "66",
+  "status": 1,
   "stokes": []
  }
 ]
