@@ -1,56 +1,33 @@
 import React, {Component} from "react";
 import "../style/stockdetails-style.css";
 import {Period} from "../core/enum/Period";
+import {Stock} from "../core/models/Stock";
+import {GraphicComponent} from "./GraphicComponent";
+
+import data from "./data";
 
 type StockDetailsProps = {
-    symbol: string
-};
-type Stock = {
-    symbol: string,
-    fullName: string
-    last: number,
-    change: number,
-    change_percent: number
+    stock: Stock
 };
 
 type State = {
-    selectedStock: Stock | undefined,
+    selectedStock: Stock,
     selectedPeriod: Period
 }
 
 export default class StockDetails extends Component<StockDetailsProps> {
 
-    stocksList: Stock[];
     state: State
+    round = (value: number): number => {
+        return Math.round(100 * value) / 100;
+    };
 
     constructor(props: StockDetailsProps) {
         super(props);
-        this.stocksList = [
-            {symbol: "MSFT", fullName: "Microsoft", last: 245.38, change: -6.86, change_percent: 8.5},
-            {symbol: "APLE", fullName: "Apple", last: 245.38, change: 6.86, change_percent: 8.5},
-            {symbol: "NFLX", fullName: "Netflix", last: 245.38, change: 6.86, change_percent: -8.5},
-            {symbol: "TSLA", fullName: "Tesla", last: 245.38, change: 6.86, change_percent: 8.5},
-        ];
         this.state = {
-            selectedStock: this.#getSelectedStock(),
+            selectedStock: this.props.stock,
             selectedPeriod: Period.ONE_MONTH
         }
-    }
-
-    #getSelectedStock = () => {
-        return this.stocksList.find(obj => obj.symbol === this.props.symbol);
-    }
-
-    #getOpenValue = (selectedStock: Stock) => {
-        return 102.08;
-    }
-
-    #getHighValue = (selectedStock: Stock) => {
-        return 102.08;
-    }
-
-    #getLowValue = (selectedStock: Stock) => {
-        return 102.08;
     }
 
     #oneMonthPeriodOnClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -86,12 +63,16 @@ export default class StockDetails extends Component<StockDetailsProps> {
             <div>
                 <div className="stocks-details-wrapper">
                     <div className="stock-title">
-                        <p className="stock-full-name">{this.state.selectedStock?.fullName}</p>
+                        <p className="stock-full-name">{this.state.selectedStock?.name}</p>
                         <div className="stock-value">
                             <p className="stock-text none-color">{this.state.selectedStock?.last}</p>
                             <p className="stock-text grey-color">USD</p>
                         </div>
-                        <p className={"stock-text " + (Number(this.state.selectedStock?.change) > 0 ? "green-color" : "red-color")}>{this.state.selectedStock?.change}</p>
+                        <p className={"stock-text " + (this.state.selectedStock?.open
+                            -this.state.selectedStock?.last > 0 ? "green-color" : "red-color")}>
+                            {this.round(this.state.selectedStock.open - this.state.selectedStock.last) > 0 ?
+                                ("+ " + this.round(this.state.selectedStock.open - this.state.selectedStock.last)) :
+                                "- " + Math.abs(this.round(this.state.selectedStock.open - this.state.selectedStock.last))}</p>
                     </div>
                     <div className="period-selector">
                         <div className="period-item" onClick={this.#oneMonthPeriodOnClick}>
@@ -107,6 +88,8 @@ export default class StockDetails extends Component<StockDetailsProps> {
                             <span className={this.state.selectedPeriod === Period.ONE_YEAR ? "selected-period" : ""}>{Period.ONE_YEAR}</span>
                         </div>
                     </div>
+
+                    <GraphicComponent data={data}></GraphicComponent>
 
                 </div>
             </div>
