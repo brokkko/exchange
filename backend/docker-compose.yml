@@ -1,0 +1,47 @@
+#services:
+#  redis:
+#    container_name: cache
+#    image: redis
+#    ports:
+#      - 6379:6379
+##    environment:
+##      - REDIS_APPENDONLY=yes
+##      - REDIS_APPENDFSYNC=always
+#    command: redis-server --save 10 1 --loglevel warning
+##    volumes:
+##      - "C:/Users/Оля/WebstormProjects/exchange/backend:/data"
+#
+#  redis-commander:
+#    image: rediscommander/redis-commander:latest
+#    environment:
+#      - REDIS_HOSTS=local:redis:6379
+#    ports:
+#      - "8081:8081"
+#    depends_on:
+#      - redis
+#
+##volumes:
+##  redis:
+##    driver: local
+
+services:
+  redis:
+    container_name: cache
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - C:/Users/Оля/WebstormProjects/exchange/backend:/data
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+
+volumes:
+  redis:
+    driver: local
