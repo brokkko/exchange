@@ -1,0 +1,45 @@
+[
+ {
+  "id": "ce9e3828-f579-451f-bfd6-00157514ebaa",
+  "firstname": "first",
+  "lastname": "test",
+  "password": "password",
+  "founds": 900.08,
+  "status": 0
+ },
+ {
+  "id": "d0c013b8-6428-46a4-9a58-0c9779ee471e",
+  "firstname": "name",
+  "lastname": "test",
+  "password": "password",
+  "founds": 900.08,
+  "status": 0
+ },
+ {
+  "id": "ffaadb89-0fe3-4192-8a9c-58b715b6c426",
+  "firstname": "Natalia",
+  "lastname": "Strannikova",
+  "founds": 0,
+  "password": "111",
+  "status": 0,
+  "stokes": []
+ },
+ {
+  "id": "c2ae77ac-a33c-4c47-a667-4add1c8b6859",
+  "firstname": "Name",
+  "lastname": "Surname",
+  "founds": 0,
+  "password": "111",
+  "status": 0,
+  "stokes": []
+ },
+ {
+  "id": "c9fcc9fd-2819-40bf-a601-a128681f34b2",
+  "firstname": "Natalia",
+  "lastname": "Strannikova",
+  "founds": 0,
+  "password": "111",
+  "status": 0,
+  "stokes": []
+ }
+]
