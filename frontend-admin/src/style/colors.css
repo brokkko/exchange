@@ -6,8 +6,10 @@
     --grey-color: #6D6D74;
     --sidebar-background-color: #151519;
     --sections-color: #292933;
+    --root-background: #1E1F26;
 
     --title-color: #E2E2E3;
+    --title-grey-color: rgba(137, 137, 145, 0.7);
     --text-color: #D2D2D4;
 
     --selector-background-color: #43434C;
@@ -28,4 +30,10 @@
 }
 .grey-color{
     color: var(--grey-color);
+}
+.title-color{
+    color: var(--title-color);
+}
+.title-grey-color{
+    color: var(--title-grey-color);
 }

@@ -44,7 +44,7 @@ export default class WatchList extends Component{
         return(
             <div className="wrapper">
                 <div className="stocks-list">
-                    <p className="title">WATCHLIST</p>
+                    <p className="title title-color">WATCHLIST</p>
                     <div className="description">
                         <p className="text">Symbol</p>
                         <p></p>

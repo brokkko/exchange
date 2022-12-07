@@ -5,8 +5,8 @@ import "../style/sidebar-style.css";
 import brokersListLogo from"../assets/sidebar/users-icon.svg";
 import exchangeLogo from"../assets/sidebar/auction-icon.svg";
 import listLogo from"../assets/sidebar/list-icon.svg";
-import {Config} from "../config/Config";
-import configJSON from "../config/config.json";
+import {Config} from "../core/config/Config";
+import configJSON from "../core/config/config.json";
 
 type SideBarState = {
     currentUri: string

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "../style/stockdetails-style.css";
-import {Period} from "./enum/Period";
+import {Period} from "../core/enum/Period";
 
 type StockDetailsProps = {
     symbol: string

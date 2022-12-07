@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import '../style/removed-brokers-style.css';
-import {Broker} from "./interfaces/Broker";
+import {Broker} from "../core/models/Broker";
 
 type RemovedBrokersProps = {
     removedBrokers: Broker[],
@@ -27,7 +27,7 @@ export default class RemovedBrokers extends Component<RemovedBrokersProps>{
     render() {
         return(
             <div className="removed-brokers-list">
-                <p className="title">REMOVED BROKERS LIST</p>
+                <p className="title-grey-color grey-title">REMOVED BROKERS LIST</p>
                 <div className="brokers-description">
                     <p className="text">Firstname</p>
                     <p className="text">Lastname</p>
