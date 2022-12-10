@@ -1,0 +1,103 @@
+input[type="checkbox"]::before {
+    /* ...existing styles */
+
+    /*transform-origin: bottom left;*/
+    /*clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);*/
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trading-button{
+    width: 275px;
+    height: 43px;
+
+    background: #434352;
+    border-style: none;
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    /* identical to box height */
+    color: var(--text-color);
+}
+.trading-button:hover{
+    background: var(--green-color);
+    color: var(--sidebar-background-color);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.datepicker-toggle {
+    display: inline-block;
+    position: relative;
+    /*width: 18px;*/
+    height: 19px;
+}
+.datepicker-toggle-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /*background: #434352;*/
+    border-radius: 5px;
+    width: 150px;
+    height: 43px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    /* identical to box height */
+    color: var(--text-color);
+}
+.datepicker-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.datepicker-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+input {
+    color-scheme: dark;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}

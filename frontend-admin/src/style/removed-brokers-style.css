@@ -30,3 +30,25 @@
     scrollbar-width: var(--scrollbarWidth);
     scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
 }
+
+.recover-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 25px;
+    background: var(--selector-background-color);
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /* identical to box height */
+    color: var(--text-color);
+}
+.recover-button:hover{
+    background: var(--green-color);
+    color: var(--sidebar-background-color);
+    cursor: pointer;
+}
