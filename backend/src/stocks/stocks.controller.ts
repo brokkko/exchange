@@ -12,4 +12,16 @@ export class StocksController {
         return this.stocksService.getAllStocks();
     }
 
+    @Get(':id')
+    @HttpCode(200)
+    async getHistoricalDataByTicker(@Param('id') ticker: string) : Promise<string> {
+        return this.stocksService.getHistoricalDataByTicker(ticker);
+    }
+
+    @Put(':id')
+    @HttpCode(200)
+    async updateBroker(@Param('id') ticker: string, @Body() updatedStock: Stock) : Promise<Stock> {
+        return this.stocksService.updateStock(ticker, updatedStock);
+    }
+
 }

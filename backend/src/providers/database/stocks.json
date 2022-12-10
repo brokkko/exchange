@@ -1,102 +1,102 @@
 [
-  {
-    "ticker": "AAPL",
-    "name": "Apple, Inc.",
-    "last": "144.22",
-    "open": "145.14",
-    "date": "11/28/2022",
-    "high": "146.64",
-    "low": "143.38",
-    "selected": false
-  },
-  {
-    "ticker": "AMD",
-    "name": "Advanced Micro Devices, Inc.",
-    "last": "73.19",
-    "open": "73.81",
-    "date": "11/28/2022",
-    "high": "75.4699",
-    "low": "72.57",
-    "selected": false
-  },
-  {
-    "ticker": "AMZN",
-    "name": "Amazon.com, Inc.",
-    "last": "93.95",
-    "open": "93.93",
-    "date": "11/28/2022",
-    "high": "96.4",
-    "low": "93.43",
-    "selected": false
-  },
-  {
-    "ticker": "CSCO",
-    "name": "Cisco Systems, Inc.",
-    "last": "48.08",
-    "open": "48.29",
-    "date": "11/28/2022",
-    "high": "48.47",
-    "low": "47.92",
-    "selected": false
-  },
-  {
-    "ticker": "META",
-    "name": "Meta, Inc.",
-    "last": "108.78",
-    "open": "110.78",
-    "date": "11/28/2022",
-    "high": "112.04",
-    "low": "108.38",
-    "selected": false
-  },
-  {
-    "ticker": "MSFT",
-    "name": "Microsoft, Inc.",
-    "last": "241.76",
-    "open": "246.08",
-    "date": "11/28/2022",
-    "high": "246.65",
-    "low": "240.8",
-    "selected": false
-  },
-  {
-    "ticker": "NFLX",
-    "name": "NFLX Inc.",
-    "last": "281.17",
-    "open": "284",
-    "date": "11/28/2022",
-    "high": "289.55",
-    "low": "280.53",
-    "selected": false
-  },
-  {
-    "ticker": "QCOM",
-    "name": "QUALCOMM Incorporated",
-    "last": "119.54",
-    "open": "122.16",
-    "date": "11/28/2022",
-    "high": "123.45",
-    "low": "118.845",
-    "selected": false
-  },
-  {
-    "ticker": "SBUX",
-    "name": "Starbucks, Inc.",
-    "last": "98.66",
-    "open": "98.99",
-    "date": "11/28/2022",
-    "high": "100.16",
-    "low": "98.56",
-    "selected": false
-  },
-  {
-    "ticker": "TSLA",
-    "name": "Tesla, Inc.",
-    "last": "182.92",
-    "open": "179.96",
-    "date": "11/28/2022",
-    "high": "188.5",
-    "low": "179",
-    "selected": false
-  }  
+ {
+  "date": "12/12/2022",
+  "high": "159.02",
+  "last": "155.37",
+  "low": "158.49",
+  "name": "Apple, Inc.",
+  "open": "165.27",
+  "selected": true,
+  "ticker": "AAPL"
+ },
+ {
+  "ticker": "AMD",
+  "name": "Advanced Micro Devices, Inc.",
+  "last": "73.19",
+  "open": "73.81",
+  "date": "11/28/2022",
+  "high": "75.4699",
+  "low": "72.57",
+  "selected": false
+ },
+ {
+  "ticker": "AMZN",
+  "name": "Amazon.com, Inc.",
+  "last": "118.86",
+  "open": "116.5",
+  "date": "12/12/2022",
+  "high": "121.58",
+  "low": "112.74",
+  "selected": true
+ },
+ {
+  "ticker": "CSCO",
+  "name": "Cisco Systems, Inc.",
+  "last": "61.86",
+  "open": "53.25",
+  "date": "12/11/2022",
+  "high": "45.38",
+  "low": "44.4",
+  "selected": false
+ },
+ {
+  "ticker": "META",
+  "name": "Meta, Inc.",
+  "last": "116.58",
+  "open": "114.39",
+  "date": "12/11/2022",
+  "high": "119.25",
+  "low": "117.16",
+  "selected": false
+ },
+ {
+  "ticker": "MSFT",
+  "name": "Microsoft, Inc.",
+  "last": "242.57",
+  "open": "235.61",
+  "date": "12/11/2022",
+  "high": "236.81",
+  "low": "233.84",
+  "selected": false
+ },
+ {
+  "ticker": "NFLX",
+  "name": "NFLX Inc.",
+  "last": "281.17",
+  "open": "284",
+  "date": "11/28/2022",
+  "high": "289.55",
+  "low": "280.53",
+  "selected": false
+ },
+ {
+  "ticker": "QCOM",
+  "name": "QUALCOMM Incorporated",
+  "last": "113.33",
+  "open": "105.48",
+  "date": "12/12/2022",
+  "high": "109.79",
+  "low": "102.01",
+  "selected": true
+ },
+ {
+  "ticker": "SBUX",
+  "name": "Starbucks, Inc.",
+  "last": "98.66",
+  "open": "98.99",
+  "date": "11/28/2022",
+  "high": "100.16",
+  "low": "98.56",
+  "selected": false
+ },
+ {
+  "ticker": "TSLA",
+  "name": "Tesla, Inc.",
+  "last": "170.05",
+  "open": "174.41",
+  "date": "12/12/2022",
+  "high": "180.67",
+  "low": "179.82",
+  "selected": true
+ }
 ]
