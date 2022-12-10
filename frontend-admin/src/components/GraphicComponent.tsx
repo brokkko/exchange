@@ -32,6 +32,7 @@ interface Price {
 
 interface Props {
     data: Array<Price>;
+    period: number;
 }
 
 export class GraphicComponent extends Component<Props>{
@@ -41,8 +42,28 @@ export class GraphicComponent extends Component<Props>{
 
     constructor(props: Props) {
         super(props);
-        this.labelList = props.data.map((price) => price.Date);
-        this.openList = props.data.map((price) => price.Open);
+
+        let currentDate = new Date();
+        let data = props.data.filter(elem => {
+            return this.#monthDiff(new Date(elem.Date), currentDate) <= this.props.period;
+        })
+
+        this.labelList = data.map((price) => price.Date).reverse();
+        this.openList = data.map((price) => price.Open).reverse();
+
+
+        // for(let i=0; i<this.labelList.length; i++) {
+        //     let dt = new Date(this.labelList[i]);
+        //     this.labelList[i] = dt.getDate() + "/" + (dt.getMonth() + 1);
+        // }
+    }
+
+    #monthDiff = (d1: Date, d2: Date) => {
+        let months;
+        months = (d2.getFullYear() - d1.getFullYear()) * 12;
+        months -= d1.getMonth();
+        months += d2.getMonth();
+        return months <= 0 ? 0 : months;
     }
 
     setData = () => {
@@ -50,7 +71,7 @@ export class GraphicComponent extends Component<Props>{
             labels: this.labelList,
             datasets: [
                 {
-                    label: "price",
+                    label: "Last",
                     data: this.openList,
                     fill: "start",
                     backgroundColor: (context: ScriptableContext<"line">) => {
@@ -68,7 +89,7 @@ export class GraphicComponent extends Component<Props>{
 
     setOptions = () => {
         return {
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             responsive: true,
             scales: {
                 x: {
@@ -90,15 +111,15 @@ export class GraphicComponent extends Component<Props>{
             interaction: {
                 intersect: true
             },
-            animation: {
-                duration: 0
-            }
+            // animation: {
+            //     duration: 0
+            // }
         };
     }
 
     render() {
         return(
-            <div className="graphic">
+            <div className="graphic" style={{height: "550px", width: "98%"}}>
                 <Line data={this.setData()} options={this.setOptions()} />
             </div>
         )
