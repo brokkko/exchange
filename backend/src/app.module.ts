@@ -9,10 +9,12 @@ import {BrokersRepository} from "./brokers/brokers.repository";
 import {StocksController} from "./stocks/stocks.controller";
 import {StocksService} from "./stocks/stocks.service";
 import {StocksRepository} from "./stocks/stocks.repository";
+import {TradingSocketsModule} from "./providers/sockets/tradingSockets.module";
 
 @Module({
   imports: [
     RedisProviderModule,
+    TradingSocketsModule
   ],
   controllers: [AppController, BrokersController, StocksController],
   providers: [AppService, BrokersService, RedisProviderService, BrokersRepository, StocksService, StocksRepository],
