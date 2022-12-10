@@ -98,6 +98,7 @@ export default class BrokersList extends Component {
             selectedBroker.status = 0;
             this.#updateBroker(selectedBroker);
         }
+
     }
 
     handleRecoverBroker = (broker: Broker | undefined) => {

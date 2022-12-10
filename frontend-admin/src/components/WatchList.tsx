@@ -7,7 +7,7 @@ import {Stock} from "../core/models/Stock";
 
 type WatchListState = {
     currentStock: Stock,
-    stocksList: Stock[]
+    stocksList: Stock[],
 }
 
 export default class WatchList extends Component{
@@ -22,7 +22,7 @@ export default class WatchList extends Component{
         super(props);
         this.state = {
             currentStock: new Stock(),
-            stocksList: []
+            stocksList: [],
         }
         this.#getAllStocks();
     }

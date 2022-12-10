@@ -3,8 +3,7 @@ import "../style/stockdetails-style.css";
 import {Period} from "../core/enum/Period";
 import {Stock} from "../core/models/Stock";
 import {GraphicComponent} from "./GraphicComponent";
-
-import data from "./data";
+import {serverURI, stocksAPIRoutes} from "../core/config/api/api.config";
 
 type StockDetailsProps = {
     stock: Stock
@@ -12,7 +11,8 @@ type StockDetailsProps = {
 
 type State = {
     selectedStock: Stock,
-    selectedPeriod: Period
+    selectedPeriod: Period,
+    historicalData: []
 }
 
 export default class StockDetails extends Component<StockDetailsProps> {
@@ -26,7 +26,39 @@ export default class StockDetails extends Component<StockDetailsProps> {
         super(props);
         this.state = {
             selectedStock: this.props.stock,
-            selectedPeriod: Period.ONE_MONTH
+            selectedPeriod: Period.ONE_YEAR,
+            historicalData: []
+        }
+
+        this.#getHistoricalData(this.state.selectedStock.ticker);
+    }
+
+    #getHistoricalData = (ticker: string) => {
+        fetch(serverURI + stocksAPIRoutes.getOne(ticker), {
+            method: 'GET',
+            headers:  {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(response => {
+            if(response.ok) return response.json();
+        }).then(json => {
+            console.log("time to update")
+            this.setState({
+                historicalData: json,
+                selectedPeriod: Period.ONE_MONTH,
+            })
+        });
+    }
+
+    #getPeriodNumberOfMonths = (period: Period) => {
+        switch (period) {
+            case Period.ONE_MONTH: return 1;
+            case Period.THREE_MONTHS: return 3;
+            case Period.SIX_MONTHS: return 6;
+            case Period.ONE_YEAR: return 12;
+            case Period.NONE: return 0;
+
         }
     }
 
@@ -55,6 +87,13 @@ export default class StockDetails extends Component<StockDetailsProps> {
         event.preventDefault();
         this.setState({
             selectedPeriod: Period.ONE_YEAR
+        });
+    }
+
+    #historyOnClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        this.setState({
+            selectedPeriod: Period.NONE
         });
     }
 
@@ -87,9 +126,20 @@ export default class StockDetails extends Component<StockDetailsProps> {
                         <div className="period-item" onClick={this.#oneYearPeriodOnClick}>
                             <span className={this.state.selectedPeriod === Period.ONE_YEAR ? "selected-period" : ""}>{Period.ONE_YEAR}</span>
                         </div>
+                        {/*<div className="period-item" onClick={this.#historyOnClick}>*/}
+                        {/*    <span className={this.state.selectedPeriod === Period.NONE ? "selected-period-long" : ""}>History</span>*/}
+                        {/*</div>*/}
                     </div>
 
-                    <GraphicComponent data={data}></GraphicComponent>
+                    <div className={this.state.selectedPeriod === Period.NONE ? "display-none" : ""}>
+                        <GraphicComponent data={this.state.historicalData} period={this.#getPeriodNumberOfMonths(this.state.selectedPeriod)} key={this.state.selectedPeriod}></GraphicComponent>
+                    </div>
+
+                    {/*<div className={this.state.selectedPeriod !== Period.NONE ? "display-none" : ""}>*/}
+                    {/*    {this.state.historicalData.map((value:any) => (*/}
+                    {/*        <p>test</p>*/}
+                    {/*    ))}*/}
+                    {/*</div>*/}
 
                 </div>
             </div>

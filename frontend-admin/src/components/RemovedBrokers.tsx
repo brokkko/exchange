@@ -40,7 +40,7 @@ export default class RemovedBrokers extends Component<RemovedBrokersProps>{
                         <p className="text fullName">{value.lastname}</p>
                         <p className="text fullName">{value.founds}</p>
                         <div id={value.id} onClick={this.recoverBrokerHandleClick}>
-                            <p className="remove-button">Recover</p>
+                            <p className="recover-button">Recover</p>
                         </div>
                     </div>
                 ))}
