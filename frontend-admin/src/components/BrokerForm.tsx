@@ -43,6 +43,7 @@ export default class BrokerForm extends Component <BrokerFormProps> {
                 firstname: this.state.name,
                 lastname: this.state.lastname,
                 founds: 0.0,
+                email: "",
                 password: this.state.password_firstTry,
                 status: 1,
                 stokes: []

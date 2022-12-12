@@ -5,6 +5,7 @@ export interface Broker {
     firstname: string;
     lastname: string;
     founds: number;
+    email: string;
     password: string;
     status: number;
     stokes: Stock[];
