@@ -2,6 +2,7 @@ import {v4 as uuidv4} from 'uuid';
 import {Broker} from "../models/Broker";
 import * as fs from "fs";
 import * as path from "path";
+import {AuthBroker} from "../models/AuthBroker";
 
 export class BrokersRepository {
     brokersTable: Broker[];
@@ -27,6 +28,10 @@ export class BrokersRepository {
 
     getBrokerById = (id: string) : Broker | null => {
         return this.brokersTable.filter((elem:Broker) => elem.id === id)[0];
+    }
+
+    getBrokerByCredentials(email: string, password: string) : Broker | null {
+        return this.brokersTable.filter((elem: Broker) => elem.email === email && elem.password === password)[0];
     }
 
     updateBroker = (id: string, updatedBroker: Broker) => {

@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { RedisProviderService } from '../providers/redis/redis-provider.service';
 import { Broker } from "../models/Broker";
 import { BrokersRepository } from "./brokers.repository";
+import {AuthBroker} from "../models/AuthBroker";
 
 @Injectable()
 export class BrokersService {
@@ -13,8 +14,6 @@ export class BrokersService {
   }
 
   saveBroker(broker: Broker) : Broker {
-    console.log("SAVING")
-    console.log(broker)
     return this.brokerRepository.saveBroker(broker);
   }
 
@@ -27,6 +26,10 @@ export class BrokersService {
     } else {
       return res;
     }
+  }
+
+  getBrokerByCredentials(email: string, password: string) : Broker | null {
+    return this.brokerRepository.getBrokerByCredentials(email, password);
   }
 
   getAllBrokers() : Broker[] {

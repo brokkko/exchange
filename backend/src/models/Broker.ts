@@ -5,6 +5,7 @@ export class Broker {
   id: string;
   firstname: string;
   lastname: string;
+  email: string;
   password: string;
   founds: number;
   status: BrokerStatus;

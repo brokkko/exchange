@@ -1,56 +1,12 @@
 [
  {
-  "id": "ffaadb89-0fe3-4192-8a9c-58b715b6c426",
-  "firstname": "Natalia",
-  "lastname": "Strannikova",
-  "founds": 0,
-  "password": "111",
-  "status": 0,
-  "stokes": []
- },
- {
-  "id": "c2ae77ac-a33c-4c47-a667-4add1c8b6859",
+  "id": "cfb18be9-a24d-4651-9b94-072a8f19bea1",
   "firstname": "Name",
   "lastname": "Surname",
-  "founds": 0,
+  "email": "email@mail.ru",
   "password": "111",
-  "status": 0,
-  "stokes": []
- },
- {
-  "id": "b4ff5c5a-6e4d-46d8-91b7-02259342dd8b",
-  "firstname": "Николай",
-  "lastname": "Ибатов",
   "founds": 0,
-  "password": "111",
-  "status": 0,
-  "stokes": []
- },
- {
-  "id": "d99b7aee-9c97-4862-ad76-e784901d6b1f",
-  "firstname": "Анатолий",
-  "lastname": "Хмарский",
-  "founds": 0,
-  "password": "23",
-  "status": 0,
-  "stokes": []
- },
- {
-  "id": "7d78ba1a-5d95-427d-9611-b9e69cbf3c97",
-  "firstname": "Валерия",
-  "lastname": "Березовская",
-  "founds": 0,
-  "password": "123",
   "status": 1,
-  "stokes": []
- },
- {
-  "id": "e19a9237-2f92-419d-b400-c076dd81742a",
-  "firstname": "Name",
-  "lastname": "Surname",
-  "founds": 0,
-  "password": "111",
-  "status": 1,
-  "stokes": []
+  "stocks": []
  }
 ]
