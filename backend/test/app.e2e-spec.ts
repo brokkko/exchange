@@ -22,3 +22,22 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 });
+
+
+
+// b.
+const value = 0.7 + 0.9;
+expect(value).toBe(1.6);
+
+//
+// c.
+// expect('команда').not.toMatch(/с/);
+//
+//
+// const value = 0.4 + 0.2;
+// expect(value).toBeCloseTo(0.6);
+//
+//
+//
+// const value = 2 + 2;
+// expect(value).toBe(4);

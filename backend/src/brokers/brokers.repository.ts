@@ -31,7 +31,9 @@ export class BrokersRepository {
     }
 
     getBrokerByCredentials(email: string, password: string) : Broker | null {
-        return this.brokersTable.filter((elem: Broker) => elem.email === email && elem.password === password)[0];
+        let res = this.brokersTable.filter((elem: Broker) => elem.email === email && elem.password === password)[0];
+        console.log(res)
+        return res;
     }
 
     updateBroker = (id: string, updatedBroker: Broker) => {

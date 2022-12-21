@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { RedisProviderService } from '../providers/redis/redis-provider.service';
 import { Broker } from "../models/Broker";
 import { BrokersRepository } from "./brokers.repository";
-import {AuthBroker} from "../models/AuthBroker";
 
 @Injectable()
 export class BrokersService {
@@ -18,6 +17,7 @@ export class BrokersService {
   }
 
   async getBrokerById(id: string) : Promise<Broker> {
+    return this.brokerRepository.getBrokerById(id);
     let res = await this.redisProvider.getByKey(id);
     if(res === null) {
       res = this.brokerRepository.getBrokerById(id);

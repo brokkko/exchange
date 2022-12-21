@@ -1,18 +1,20 @@
 <template>
-  <div class="container">
-    <div class="info">
-      <span class="text title">TRADING</span>
-      <span class="text">Welcome! Create your new account.</span>
-    </div>
-    <div class="login-form">
-      <input type="text" v-model="name" placeholder="Name">
-      <input type="text" v-model="surname" placeholder="Surname">
-      <input type="email" v-model="email" placeholder="Email">
-      <input type="password" v-model="password1" placeholder="Password">
-      <input type="password" v-model="password2" placeholder="Password">
-      <div class="buttons text">
-        <button id="selected" v-on:click="signUp">Sign Up</button>
-        <button id="not-selected" v-on:click="routeToLogin">Login</button>
+  <div class="signup-page">
+    <div class="container">
+      <div class="info">
+        <span class="text title">TRADING</span>
+        <span class="text">Welcome! Create your new account.</span>
+      </div>
+      <div class="login-form">
+        <input type="text" v-model="name" placeholder="Name">
+        <input type="text" v-model="surname" placeholder="Surname">
+        <input type="email" v-model="email" placeholder="Email">
+        <input type="password" v-model="password1" placeholder="Password">
+        <input type="password" v-model="password2" placeholder="Password">
+        <div class="buttons text">
+          <button id="selected" v-on:click="signUp">Sign Up</button>
+          <button id="not-selected" v-on:click="routeToLogin">Login</button>
+        </div>
       </div>
     </div>
   </div>
@@ -55,6 +57,13 @@ export default {
 </script>
 
 <style scoped>
+.signup-page{
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
 .container{
   background: var(--section-background-color);
   width: 35vw;

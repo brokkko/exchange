@@ -8,7 +8,7 @@ export class StocksController {
 
     @Get()
     @HttpCode(200)
-    async getAllBrokers(): Promise<Stock[]> {
+    async getAllStocks(): Promise<Stock[]> {
         return this.stocksService.getAllStocks();
     }
 

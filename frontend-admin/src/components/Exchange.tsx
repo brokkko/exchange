@@ -137,6 +137,10 @@ export default class Exchange extends Component{
         }
     }
 
+    componentWillUnmount() {
+        this.socket.disconnect();
+    }
+
     render() {
         return(
             <div className="wrapper">

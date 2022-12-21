@@ -5,8 +5,129 @@
   "lastname": "Surname",
   "email": "email@mail.ru",
   "password": "111",
-  "founds": 0,
-  "status": 1,
+  "founds": 2000,
+  "status": 0,
   "stocks": []
+ },
+ {
+  "id": "d1d0d431-d19d-4dfd-a551-ce7a87927d14",
+  "firstname": "Natalia",
+  "lastname": "Strannikova",
+  "email": "nsstrannikova@mail.ru",
+  "password": "111",
+  "founds": 682.44,
+  "status": 1,
+  "stocks": [
+   {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "last": "269.26",
+    "open": "272.23",
+    "date": "12/17/2022",
+    "high": "270.05",
+    "low": "269.03",
+    "selected": true
+   },
+   {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "last": "269.26",
+    "open": "272.23",
+    "date": "12/17/2022",
+    "high": "270.05",
+    "low": "269.03",
+    "selected": true
+   },
+   {
+    "date": "12/16/2022",
+    "high": "52.03",
+    "last": "39.76",
+    "low": "35",
+    "name": "Apple, Inc.",
+    "open": "44.37",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "52.03",
+    "last": "39.76",
+    "low": "35",
+    "name": "Apple, Inc.",
+    "open": "44.37",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "52.03",
+    "last": "39.76",
+    "low": "35",
+    "name": "Apple, Inc.",
+    "open": "44.37",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "52.03",
+    "last": "39.76",
+    "low": "35",
+    "name": "Apple, Inc.",
+    "open": "44.37",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "52.03",
+    "last": "39.76",
+    "low": "35",
+    "name": "Apple, Inc.",
+    "open": "44.37",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "137.36",
+    "last": "145.43",
+    "low": "135.11",
+    "name": "Apple, Inc.",
+    "open": "144.22",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "137.36",
+    "last": "145.43",
+    "low": "135.11",
+    "name": "Apple, Inc.",
+    "open": "144.22",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "137.36",
+    "last": "145.43",
+    "low": "135.11",
+    "name": "Apple, Inc.",
+    "open": "144.22",
+    "selected": true,
+    "ticker": "AAPL"
+   },
+   {
+    "date": "12/16/2022",
+    "high": "137.36",
+    "last": "145.43",
+    "low": "135.11",
+    "name": "Apple, Inc.",
+    "open": "144.22",
+    "selected": true,
+    "ticker": "AAPL"
+   }
+  ]
  }
 ]

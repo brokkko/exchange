@@ -51,11 +51,6 @@ export class GraphicComponent extends Component<Props>{
         this.labelList = data.map((price) => price.Date).reverse();
         this.openList = data.map((price) => price.Open).reverse();
 
-
-        // for(let i=0; i<this.labelList.length; i++) {
-        //     let dt = new Date(this.labelList[i]);
-        //     this.labelList[i] = dt.getDate() + "/" + (dt.getMonth() + 1);
-        // }
     }
 
     #monthDiff = (d1: Date, d2: Date) => {

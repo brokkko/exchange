@@ -12,10 +12,15 @@ const routes = [
         component: () => import('../components/Login.vue')
     },
     {
+        path: '/info',
+        name: 'info',
+        component: () => import('../components/BrokersList.vue')
+    },
+    {
         path: '/home',
         name: 'home',
-        component: () => import('../components/BrokersList.vue')
-    }
+        component: () => import('../components/BrokerAccount.vue')
+    },
 ]
 
 const router = new createRouter({

@@ -1,6 +1,14 @@
 *{
     --root-background-color: #272731;
     --section-background-color: #353641;
+    --sidebar-background-color: #151519;
+    --title-grey-color: rgba(137, 137, 145, 0.7);
+    --green-color: #21C78F;
+    --red-color: #F9607B;
+    --hover-color: #3A3A43;
+
+    --input-selected-range: #30AF7D;
+    --input-not-selected-range: #474751;
 
     --button-blue-selected-color: #24A3FF;
 
